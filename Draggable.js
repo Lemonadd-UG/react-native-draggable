@@ -232,8 +232,8 @@ export default function Draggable(props) {
 
   const handlePressOut = React.useCallback(
     (event) => {
-      onPressOut(event);
       if (!isDragging.current) {
+        onPressOut(event);
         onRelease(event, false);
       }
     },
